@@ -104,6 +104,12 @@
 
 <body id="page-top" class="index" onload="hideAll('u');hideAll('');myfn3(${sessionScope['hospitalatt'].id});myfn4(${sessionScope['hospitalatt'].id})">
 <%
+
+	HttpSession session1=request.getSession(false);
+response.setHeader("Cache-Control","no-cache");
+response.setHeader("Cache-Control","no-store");
+response.setDateHeader("Expires",0);
+response.setHeader("Pragma","no-cache");
 if(null==request.getSession().getAttribute("hospitalatt")||null==request.getSession().getAttribute("doctoratt"))
 {
 	RequestDispatcher rd = request.getRequestDispatcher("index.jsp?reason=logout");
