@@ -8,7 +8,6 @@
 <%@ page import="healthcare.model.DB" %>
 <%@ page import="notify.email.Misc" %>
 <html lang="en">
-
 <head>
 
     <meta charset="utf-8">
