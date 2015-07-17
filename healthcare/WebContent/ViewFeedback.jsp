@@ -69,6 +69,13 @@
 
 	</head>
 	<body>
+	<%
+		HttpSession session1=request.getSession(false);
+		response.setHeader("Cache-Control","no-cache");
+		response.setHeader("Cache-Control","no-store");
+		response.setDateHeader("Expires",0);
+		response.setHeader("Pragma","no-cache");
+	%>
 	    <section id="portfolio" class="bg-light-gray">
         <div class="container">
   <h2>View and Update Schedule </h2>
