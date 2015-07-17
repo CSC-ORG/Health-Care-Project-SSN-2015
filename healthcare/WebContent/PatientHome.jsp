@@ -117,7 +117,13 @@
     <div id="progstat"></div>
     <div id="progress"></div>
   </div-->
-<%if(null==request.getSession().getAttribute("patientatt"))
+<%
+	HttpSession session1=request.getSession(false);
+response.setHeader("Cache-Control","no-cache");
+response.setHeader("Cache-Control","no-store");
+response.setDateHeader("Expires",0);
+response.setHeader("Pragma","no-cache");
+if(null==request.getSession().getAttribute("patientatt"))
 {
 	RequestDispatcher rd = request.getRequestDispatcher("index.jsp?reason=logout");
 	rd.forward(request,response);
