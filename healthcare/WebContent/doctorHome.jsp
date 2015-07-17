@@ -150,7 +150,13 @@
 </head>
 
 <body id="page-top" class="index" onload="hideAll('u');hideAll('');">
-<%if(null==request.getSession().getAttribute("doctoratt"))
+<%
+HttpSession session1=request.getSession(false);
+response.setHeader("Cache-Control","no-cache");
+response.setHeader("Cache-Control","no-store");
+response.setDateHeader("Expires",0);
+response.setHeader("Pragma","no-cache");
+if(null==request.getSession().getAttribute("doctoratt"))
 {
 	RequestDispatcher rd = request.getRequestDispatcher("index.jsp?reason=logout");
 	rd.forward(request,response);
@@ -475,7 +481,7 @@
 
 	<form action="DoctorSchedule" method="post" name="detailsaddform" onsubmit="sendurl()">
 	<input type="hidden" name="reason" value="doctor"/>
-	<div >
+	<div style="display: none;">
   		<span id="selectedDays" ></span>
   		<input type="hidden" name="sdays" id="sdays"/>
   		<input type="hidden" name="hid" id="hid" placeholder="" required/>
