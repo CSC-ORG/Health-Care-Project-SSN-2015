@@ -16,7 +16,6 @@
 
 	<!-- recaptcha google api -->
 	<!-- script src="https://www.google.com/recaptcha/api.js" async defer></script-->
-	
 <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/agency.css" rel="stylesheet">
