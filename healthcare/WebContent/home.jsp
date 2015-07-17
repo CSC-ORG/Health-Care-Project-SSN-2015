@@ -107,7 +107,13 @@
 </head>
 
 <body id="page-top" class="index" onload="alertbox();hidewarningdiv();">
-<%if(null==request.getSession().getAttribute("hospitalatt"))
+<%
+	HttpSession session1=request.getSession(false);
+response.setHeader("Cache-Control","no-cache");
+response.setHeader("Cache-Control","no-store");
+response.setDateHeader("Expires",0);
+response.setHeader("Pragma","no-cache");
+if(null==request.getSession().getAttribute("hospitalatt"))
 {
 	RequestDispatcher rd = request.getRequestDispatcher("index.jsp?reason=logout");
 	rd.forward(request,response);
