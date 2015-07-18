@@ -75,7 +75,7 @@ public class UpdateDoctorSchedule extends HttpServlet {
 				sql = "update doctime set fromTime='"+weekmTime[i][1]+"',toTime='"+weekmTime[i][2]+"' where mcid='"+u.id+"' and id="+hid+" and day = '"+weekmTime[i][0]+"' and session = 'Morning'";
 				stmt.execute(sql);
 			}else{
-				sql = "delete from doctime where mcid='"+u.id+"' and id="+hid+" and day = '"+weekmTime[i][0]+"' and session = 'Evening'";
+				sql = "delete from doctime where mcid='"+u.id+"' and id="+hid+" and day = '"+weekmTime[i][0]+"' and session = 'Morning'";
 				stmt.execute(sql);
 			}
 			if(!weekaTime[i][1].equals("")&&!weekaTime[i][2].equals("")){
