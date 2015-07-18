@@ -340,7 +340,7 @@ if(null==request.getSession().getAttribute("hospitalatt"))
   <input type="hidden" name="reason" value="hospital"/>
     <div class="form-group">
       <label for="name">*Name</label>
-      <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value=<%=rs.getString("name") %> required>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value="<%=rs.getString("name") %>" required>
           <span id="pwdspan"></span>
       <label for="pwd">*Password:</label>
       <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter password" required>
