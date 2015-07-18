@@ -24,10 +24,10 @@
     stmt.setString(1,s);
 	ResultSet rs = stmt.executeQuery();
 	
-	out.println("<table class='table table-hover'><tr><th>Patient ID</th><th>Date</th><th>Session</th><th>Day</th></tr>");	
+	out.println("<table class='table table-hover'><tr><th>Appointment ID</th><th>Patient ID</th><th>Date</th><th>Session</th><th>Day</th></tr>");	
 	while(rs.next())
 	{
-		out.println("<tr><td>"+rs.getString(3)+"</td><td>"+rs.getString(4)+"</td><td>"+rs.getString(5)+"</td><td>"+rs.getString(6)+"</td></tr>");
+		out.println("<tr><td>"+rs.getString(3)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(4)+"</td><td>"+rs.getString(5)+"</td><td>"+rs.getString(6)+"</td></tr>");
 	}
 	out.println("</table>");
 	
