@@ -95,7 +95,6 @@ public class DoctorSchedule extends HttpServlet {
 		rd.forward(request, response);
 		} catch (Exception e) {
 		// 	TODO Auto-generated catch block
-			System.out.println("here");
 			rd = request.getRequestDispatcher("index.jsp?reason=unknown");
 			rd.forward(request, response);
 		}
